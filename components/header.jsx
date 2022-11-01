@@ -29,13 +29,13 @@ export default function Header({ categories }) {
           } md:flex md:items-center w-full md:w-auto`}
         >
           <ul className="md:flex md:justify-between md:pt-0">
-            {Object.entries(categories).map(([slug, name]) => (
-              <li key={slug}>
+            {categories.map((category) => (
+              <li key={category.slug}>
                 <a
                   className="md:p-4 py-2 block hover:text-slate-600"
-                  href={`/categories/${slug}`}
+                  href={`/categories/${category.slug}`}
                 >
-                  {name}
+                  {category.data.name}
                 </a>
               </li>
             ))}
