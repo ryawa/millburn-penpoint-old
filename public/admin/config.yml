@@ -6,20 +6,64 @@ public_folder: /images
 
 collections:
   - name: "categories"
+    identifier_field: "name"
     label: "Categories"
     label_singular: "Category"
     folder: "content/categories"
     create: true
     slug: "{{slug}}"
     fields:
-      - { name: "title", label: "Title", widget: "string" }
-  - name: "author"
+      - { name: "name", label: "Name", widget: "string" }
+  - name: "authors"
+    identifier_field: "name"
     label: "Authors"
     label_singular: "Author"
     folder: "content/authors"
     create: true
     slug: "{{slug}}"
     fields:
-      - { name: "name", label: "Name", widget: "string" }
-      - { name: "bio", label: "Bio", widget: "text" }
-      - { name: "picture", label: "Picture", widget: "image", allow_multiple: false }
+      - name: "name"
+        label: "Name"
+        widget: "string"
+      - name: "bio"
+        label: "Bio"
+        widget: "text"
+      - name: "picture"
+        label: "Picture"
+        widget: "image"
+        allow_multiple: false
+  - name: "articles"
+    label: "Articles"
+    label_singular: "Article"
+    folder: "content/articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - name: "title"
+        label: "Title"
+        widget: "string"
+      - name: "date"
+        label: "Publish Date"
+        widget: "datetime"
+        date_format: "MM-DD-YYYY"
+        time_format: false
+      - name: "coverImage"
+        label: "Cover Image"
+        widget: "image"
+        allow_multiple: false
+      - name: "author"
+        label: "Author"
+        widget: "relation"
+        collection: "authors"
+        value_field: "name"
+        search_fields: ["name"]
+      - name: "categories"
+        label: "Categories"
+        widget: "relation"
+        collection: "categories"
+        value_field: "name"
+        search_fields: ["name"]
+        multiple: true
+      - name: "body"
+        label: "Body"
+        widget: "markdown"
