@@ -5,11 +5,21 @@ media_folder: public/images
 public_folder: /images
 
 collections:
-  - label: "Categories"
+  - name: "categories"
+    label: "Categories"
     label_singular: "Category"
-    name: "categories"
     folder: "content/categories"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { name: "title", label: "Title", widget: "string" }
+  - name: "author"
+    label: "Authors"
+    label_singular: "Author"
+    folder: "content/authors"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "name", label: "Name", widget: "string" }
+      - { name: "bio", label: "Bio", widget: "text" }
+      - { name: "picture", label: "Picture", widget: "image", allow_multiple: false }
