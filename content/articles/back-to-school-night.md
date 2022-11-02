@@ -1,6 +1,6 @@
 ---
 title: Back to School Night
-date: 2022-11-01T22:29:12.470Z
+date: 2022-11-01
 coverImage: /images/back-to-school-night.jpg
 author: Olivia Shidler
 categories:

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Header({ categories }) {
   const [hidden, setHidden] = useState(true);
@@ -31,12 +32,12 @@ export default function Header({ categories }) {
           <ul className="md:flex md:justify-between md:pt-0">
             {categories.map((category) => (
               <li key={category.slug}>
-                <a
+                <Link
                   className="md:p-4 py-2 block hover:text-slate-600"
-                  href={`/categories/${category.slug}`}
+                  href={`/category/${category.slug}`}
                 >
                   {category.data.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

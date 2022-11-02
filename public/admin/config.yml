@@ -45,9 +45,11 @@ collections:
       - name: "date"
         label: "Publish Date"
         widget: "datetime"
+        format: "MM-DD-YYYY"
         date_format: "MM-DD-YYYY"
         time_format: false
-      - name: "coverImage"
+        picker_utc: true
+      - name: "image"
         label: "Cover Image"
         widget: "image"
         allow_multiple: false
@@ -55,13 +57,13 @@ collections:
         label: "Author"
         widget: "relation"
         collection: "authors"
-        value_field: "name"
+        value_field: "*"
         search_fields: ["name"]
       - name: "categories"
         label: "Categories"
         widget: "relation"
         collection: "categories"
-        value_field: "name"
+        value_field: "*"
         search_fields: ["name"]
         multiple: true
       - name: "body"
