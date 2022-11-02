@@ -53,13 +53,13 @@ collections:
         label: "Author"
         widget: "relation"
         collection: "authors"
-        value_field: "slug"
+        value_field: "{{slug}}"
         search_fields: ["name"]
       - name: "categories"
         label: "Categories"
         widget: "relation"
         collection: "categories"
-        value_field: "slug"
+        value_field: "{{slug}}"
         search_fields: ["name"]
         multiple: true
       - { name: "body", label: "Body", widget: "markdown" }
