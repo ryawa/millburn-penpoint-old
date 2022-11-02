@@ -11,7 +11,9 @@ export default function Category({ category, categories, articles }) {
         <title>{`The Millburn Penpoint - ${category.data.name}`}</title>
       </Head>
       <Header categories={categories} />
-      <h1 className="text-6xl font-bold tracking-tight">{category.data.name}</h1>
+      <h1 className="my-12 text-6xl font-bold tracking-tight">
+        {category.data.name}
+      </h1>
       <Articles articles={articles} />
     </Layout>
   );
@@ -21,7 +23,7 @@ export async function getStaticProps({ params }) {
   const categories = getCategories();
   const category = categories.find((category) => category.slug === params.slug);
   const articles = getArticles().filter((article) =>
-    article.data.categories.includes(category.data.name)
+    article.data.categories.includes(category.slug)
   );
   return {
     props: {

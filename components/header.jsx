@@ -4,11 +4,11 @@ import Link from "next/link";
 export default function Header({ categories }) {
   const [hidden, setHidden] = useState(true);
   return (
-    <header>
-      <nav className="my-16 flex flex-wrap items-center justify-between">
-        <h1 className="text-4xl font-bold tracking-tight">
+    <header className="my-16">
+      <nav className="flex flex-wrap items-center justify-between">
+        <Link href="/" className="text-4xl font-bold tracking-tight">
           The Millburn Penpoint
-        </h1>
+        </Link>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6 cursor-pointer md:hidden block"
@@ -33,8 +33,8 @@ export default function Header({ categories }) {
             {categories.map((category) => (
               <li key={category.slug}>
                 <Link
-                  className="md:p-4 py-2 block hover:text-slate-600"
                   href={`/category/${category.slug}`}
+                  className="md:p-4 py-2 block hover:text-slate-600"
                 >
                   {category.data.name}
                 </Link>

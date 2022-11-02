@@ -3,11 +3,16 @@ import Link from "next/link";
 
 export default function Article({ article }) {
   return (
-    <section>
-      <div className="mb-8 md:mb-16">
-        <Image src={article.data.coverImage} width={2000} height={1000} />
+    <section className="mb-24">
+      <div className="mb-8">
+        <Image
+          src={article.data.image.src}
+          alt={article.data.image.alt}
+          width={2000}
+          height={1000}
+        />
       </div>
-      <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
+      <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8">
         <div>
           <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
             <Link href={`/post/${article.slug}`} className="hover:underline">

@@ -24,8 +24,8 @@ collections:
     fields:
       - { name: "name", label: "Name", widget: "string" }
       - { name: "bio", label: "Bio", widget: "text" }
-      - name: "picture"
-        label: "Picture"
+      - name: "image"
+        label: "Image"
         widget: "image"
         allow_multiple: false
   - name: "articles"
