@@ -22,12 +22,8 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - name: "name"
-        label: "Name"
-        widget: "string"
-      - name: "bio"
-        label: "Bio"
-        widget: "text"
+      - { name: "name", label: "Name", widget: "string" }
+      - { name: "bio", label: "Bio", widget: "text" }
       - name: "picture"
         label: "Picture"
         widget: "image"
@@ -39,9 +35,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - name: "title"
-        label: "Title"
-        widget: "string"
+      - { name: "title", label: "Title", widget: "string" }
       - name: "date"
         label: "Publish Date"
         widget: "datetime"
@@ -51,8 +45,10 @@ collections:
         picker_utc: true
       - name: "image"
         label: "Cover Image"
-        widget: "image"
-        allow_multiple: false
+        widget: "object"
+        fields:
+          - { name: src, label: Image, widget: image, allow_multiple: false }
+          - { name: alt, label: Alt text, widget: string }
       - name: "author"
         label: "Author"
         widget: "relation"
@@ -66,6 +62,4 @@ collections:
         value_field: "*"
         search_fields: ["name"]
         multiple: true
-      - name: "body"
-        label: "Body"
-        widget: "markdown"
+      - { name: "body", label: "Body", widget: "markdown" }
