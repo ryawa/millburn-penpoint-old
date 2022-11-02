@@ -1,10 +1,13 @@
 ---
 title: Back to School Night
-date: 2022-11-01
+date: 09-28-2022
 coverImage: /images/back-to-school-night.jpg
-author: Olivia Shidler
+image:
+  src: /images/back-to-school-night.jpg
+  alt: Millburn Middle School's main entrance
+author: olivia-shidler
 categories:
-  - School News
+  - school-news
 ---
 On September 22, Back to School Night for 7th and 8th grade parents took place from 7-9 pm. Parents and CORE 8 Peer Leaders filled MMS. Parents looked forward to meeting their child’s teachers and seeing what their child did every day at school.
 
