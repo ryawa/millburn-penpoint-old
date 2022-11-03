@@ -8,7 +8,6 @@ author: olivia-shidler
 categories:
   - school-news
 ---
-
 On September 22, Back to School Night for 7th and 8th grade parents took place from 7-9 pm. Parents and CORE 8 Peer Leaders filled MMS. Parents looked forward to meeting their child’s teachers and seeing what their child did every day at school.
 
 The CORE 8 Peer Leaders started off the night in the New Cafeteria by giving parents their child’s schedules and showing them to the auditorium for Mr. Connolly’s speech. Then, they scattered into the halls to assist parents to their child’s classrooms.
