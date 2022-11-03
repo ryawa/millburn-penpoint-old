@@ -15,7 +15,7 @@ export default function Article({ article }) {
       <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8">
         <div>
           <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
-            <Link href={`/post/${article.slug}`} className="hover:underline">
+            <Link href={`/posts/${article.slug}`} className="hover:underline">
               {article.data.title}
             </Link>
           </h3>

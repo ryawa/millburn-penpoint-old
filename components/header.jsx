@@ -33,7 +33,7 @@ export default function Header({ categories }) {
             {categories.map((category) => (
               <li key={category.slug}>
                 <Link
-                  href={`/category/${category.slug}`}
+                  href={`/categories/${category.slug}`}
                   className="md:p-4 py-2 block hover:text-slate-600"
                 >
                   {category.data.name}
